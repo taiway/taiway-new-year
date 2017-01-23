@@ -493,8 +493,8 @@ body {
 
 .btn_primary {
     color: white;
-    border-color: #50b584;
-    background-color: #50b584
+    border-color: #dc2223;
+    background-color: #dc2223
 }
 
 .btn_primary:hover,
@@ -1267,7 +1267,7 @@ input#uploadInput {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 3px;
-    width: 50%;
+    width: 45%;
     display: inline-block
 }
 
