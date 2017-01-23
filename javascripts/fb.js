@@ -7,7 +7,7 @@
     token: null,
     userID: null,
     picture: null,
-    perms: "public_profile,user_photos,publish_actions",
+    perms: "public_profile,user_photos",
     appId: fbappid,
     shareCapition: '',
     afterPageLoad: function() {},
