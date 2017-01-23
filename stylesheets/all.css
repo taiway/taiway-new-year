@@ -1368,7 +1368,7 @@ input#uploadInput {
     outline: none;
     width: 24px;
     height: 6px;
-    background: #50b584;
+    background: #dc2223;
     opacity: 1;
     border: 0px solid transparent;
     -webkit-border-radius: 15px;
@@ -1508,11 +1508,11 @@ input#uploadInput {
 }
 
 .editor-section .templates .btn:hover:before {
-    border: 2px solid rgba(80, 181, 132, 0.2)
+    border: 2px solid #dc2223
 }
 
 .editor-section .templates .btn.active:before {
-    border: 2px solid rgba(80, 181, 132, 0.75)
+    border: 2px solid #dc2223
 }
 
 .editor-section .templates img {
