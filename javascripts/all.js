@@ -201,7 +201,7 @@ function downloadImage(){
   var msie = ua.indexOf("MSIE ");
   if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
     var html="<p>請按右鍵另存圖片</p>";
-    html+="<img src='"+base64+"' alt='iing-no-2'/>";
+    html+="<img src='"+base64+"' alt='taiway-newyear'/>";
     var tab=window.open();
     tab.document.write(html);
   } else {
@@ -209,12 +209,6 @@ function downloadImage(){
       $util.resizeWindow(w, 500, 500)
       w.location.href = url
     })
-    // 原本的 download 方式
-    // base64 = base64.replace("image/png", "image/png;headers=Content-Disposition%3A%20attachment%3B%20filename=iing-no-2.png;")
-    // $('#download').attr('href',base64);
-    // $('#download').attr('download', "iing-no-2.png");
-    // $('#download').attr('target', "_blank");
-    // $('#download')[0].click();
   }
 }
 
