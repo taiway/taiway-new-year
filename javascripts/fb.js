@@ -1,7 +1,7 @@
 (function() {
   var Facebook, fbappid;
 
-  fbappid = location.href.indexOf("iing.tw") >= 0 ? '1476442785996284' : '267188576687915';
+  fbappid = '246533085780155';
 
   window.$fb = {
     token: null,
@@ -121,7 +121,7 @@
 
     Facebook.prototype.publishPost = function(imgurl) {
       return FB.api('/me/feed', 'post', {
-        link: 'http://2.iing.tw',
+        link: 'http://newyear.tai-way.com/',
         picture: imgurl
       }, function(response) {
         return xx(response.id);
