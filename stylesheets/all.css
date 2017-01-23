@@ -521,8 +521,8 @@ body {
 .btn_secondary:hover,
 .btn_secondary:focus {
     color: white;
-    border-color: #9cc758;
-    background-color: #9cc758
+    border-color: #dc2223;
+    background-color: #dc2223
 }
 
 .btn_secondary:disabled,

@@ -66,7 +66,7 @@
         if ($util.isDesktop() && !$util.isSafari()) {
           return $util.urlToBlob(url, function(blob) {
             w.close();
-            return saveAs(blob, 'iing-no-2.png');
+            return saveAs(blob, 'taiway-newyear.png');
           });
         } else {
           return callback(url, w);
