@@ -163,7 +163,7 @@ function downloadImage(){
   var ua = window.navigator.userAgent;
   var msie = ua.indexOf("MSIE ");
     var html="<p>請按右鍵另存圖片</p>";
-    html+="<img src='"+base64+"' alt='taiway-newyear'/>";
+    html+="<a href='"+base64+"' alt='taiway-newyear' download='taiway.jpg'>123</a>";
     var tab=window.open();
     tab.document.write(html);
 }
