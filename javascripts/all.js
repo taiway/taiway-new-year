@@ -158,7 +158,7 @@ window.getBase64 = function() {
 
 function downloadImage(){
   var base64 = getBase64()
-  $("#normalSubmit").src('href',base64);
+  $("#normalSubmit").attr('href',base64);
 }
 
 //uploader
