@@ -61,36 +61,6 @@
       return parseFloat(string.replace('px', ''));
     };
 
-    Util.prototype.downloadByBase64 = function(base64, callback) {
-      return $util.uploadBase64(base64, function(url, w) {
-        if ($util.isDesktop() && !$util.isSafari()) {
-          return $util.urlToBlob(url, function(blob) {
-            w.close();
-            return saveAs(blob, 'taiway-newyear.png');
-          });
-        } else {
-          return callback(url, w);
-        }
-      });
-    };
-
-    Util.prototype.uploadBase64 = function(base64, callback) {
-      var directDownload, endpoing, w;
-
-      endpoing = "http://iing.tw/badges.json";
-      directDownload = false;
-      if ($util.isFBWebview()) {
-        w = window;
-      } else {
-        w = window.open("/waiting.html", "wait", "width=500, height=500, menubar=no, resizable=no, scrollbars=no, status=no, titlebar=no, toolbar=no");
-      }
-      return $.post(endpoing, {
-        data: base64
-      }, function(result) {
-        return callback(result.url, w);
-      });
-    };
-
     Util.prototype.resizeWindow = function(w, width, height) {
       if (w.outerWidth) {
         return w.resizeTo(width + (w.outerWidth - w.innerWidth), height + (w.outerHeight - w.innerHeight));
