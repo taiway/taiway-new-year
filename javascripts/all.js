@@ -29,10 +29,6 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
-  // if(location.href.indexOf("fb-review") >= 0) {
-  //   $('.js-fb-upload').show()
-  // }
-  // ie alert
   $("body").iealert({
     support: 'ie9',
     title: '您的瀏覽器太舊啦！',
@@ -73,12 +69,6 @@ $(document).ready(function() {
         left = center[0] - width*0.5,
         top = center[1] - height*0.5;
 
-        // 強制把圖放回中間
-        // left = 0 - ((width - $originSize) / 2)
-        // top = 0 - ((height - $originSize) / 2)
-
-        // 以下是針對四個角在 resize 時做調整，避免圖在縮小時跑到邊界外 XD
-        // 但後來決定 resize 直接強制把圖放回中間，所以就註解了
         if(top > 0){
           top = 0
         } else if(top + height < $originSize) {
@@ -125,39 +115,12 @@ $(document).ready(function() {
     $coverimage.css('background-image','url('+url+')');
     if($userimage.hasClass('dragged') == true) $userimage.attr('class', 'inner dragged');
     else $userimage.attr('class', 'inner');
-
-    // 執行這塊會造成 draggerBorder 失效，使得圖片可以被拖曳到看不見，只好先註解，因為也沒有造成其他問題
-    // $('<img/>').attr('src',$util.getBackgroundImageUrl($userimage))
-    // .load(function() {
-    //   var
-    //   size = [this.width,this.height],
-    //   container_size = $userimage.width();
-    //   resizeDragger(size,container_size,value);
-    // });
   });
 
   $("#normalSubmit").click(function() {
     downloadImage();
   });
 });
-// $(window).konami({
-//   code : [55,55,55],
-//   cheat: function() {
-//     $('.banana').slideDown();
-//   }
-// });
-// $(window).konami({
-//   code : [54,54,54],
-//   cheat: function() {
-//     $('h1,#size-slider').delay(100).animate({'opacity':'0'},2900)
-//     $('#formbuttons,.template-label').delay(400).animate({'opacity':'0'},2600)
-//     $('#settings').delay(1000).animate({'opacity':'0'},2000)
-//     $('.left-bottom-corner').delay(800).animate({'opacity':'0'},2200)
-//     $('.preview').animate({'top':'-500px','opacity':'0.5'},3000).animate({'width':'0','opacity':'0'},3000,function(){
-//       $('#content').slideUp();
-//     })
-//   }
-// });
 
 window.getBase64 = function() {
   var
