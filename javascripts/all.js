@@ -158,14 +158,7 @@ window.getBase64 = function() {
 
 function downloadImage(){
   var base64 = getBase64()
-
-  // check ie or not
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf("MSIE ");
-    var html="<p>請按右鍵另存圖片</p>";
-    html+="<a href='"+base64+"' alt='taiway-newyear' download='taiway.jpg'>123</a>";
-    var tab=window.open();
-    tab.document.write(html);
+  $("#normalSubmit").src('href',base64);
 }
 
 //uploader
@@ -259,7 +252,7 @@ window.loadImage = function(files) {
     var thumbbase64 = thumb.toDataURL("image/png");
     $('#templates label').css('background-image','url('+thumbbase64+')');
     $('#normalSubmit').attr('href',base64);
-    
+
     $('<img/>').attr('src',base64)
     .load(function() {
       var
