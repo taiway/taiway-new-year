@@ -162,17 +162,10 @@ function downloadImage(){
   // check ie or not
   var ua = window.navigator.userAgent;
   var msie = ua.indexOf("MSIE ");
-  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
     var html="<p>請按右鍵另存圖片</p>";
     html+="<img src='"+base64+"' alt='taiway-newyear'/>";
     var tab=window.open();
     tab.document.write(html);
-  } else {
-    $util.downloadByBase64(base64 ,function(url, w) {
-      $util.resizeWindow(w, 500, 500)
-      w.location.href = url
-    })
-  }
 }
 
 //uploader
