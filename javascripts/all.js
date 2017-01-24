@@ -258,9 +258,9 @@ window.loadImage = function(files) {
     ctx.drawImage(img,0,0,thumb_w,thumb_h);
     var thumbbase64 = thumb.toDataURL("image/png");
     $('#templates label').css('background-image','url('+thumbbase64+')');
-
-    $('<img/>').attr('src',base64)
     $('#normalSubmit').attr('href',base64);
+    
+    $('<img/>').attr('src',base64)
     .load(function() {
       var
       value = $('input[name=template]:checked').val(),
